@@ -1,0 +1,7 @@
+gh/
+gtk*
+github-copilot*
+yarn/*
+gh/*
+configstore/*
+tmux/plugins
