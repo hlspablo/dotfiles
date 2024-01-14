@@ -86,12 +86,29 @@ return {
 			position = "right",
 		},
 	},
-
 	{
 		"nvim-cmp",
 		dependencies = { "hrsh7th/cmp-emoji" },
 		opts = function(_, opts)
 			table.insert(opts.sources, { name = "emoji" })
 		end,
+	},
+	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		opts = {
+			suggestion = {
+				enabled = true,
+				auto_trigger = false,
+				keymap = {
+					accept = "<Tab>",
+				},
+			},
+			panel = { enabled = false },
+			filetypes = {
+				markdown = true,
+				help = true,
+			},
+		},
 	},
 }
