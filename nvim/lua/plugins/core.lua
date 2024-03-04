@@ -4,15 +4,8 @@ return {
   { "AstroNvim/astrotheme", lazy = true, opts = { plugins = { ["dashboard-nvim"] = true } } },
   { "max397574/better-escape.nvim", event = "InsertCharPre", opts = { timeout = 300 } },
   { "NMAC427/guess-indent.nvim", event = "User AstroFile", config = require "plugins.configs.guess-indent" },
-  { -- TODO: REMOVE neovim-session-manager with AstroNvim v4
-    "Shatur/neovim-session-manager",
-    event = "BufWritePost",
-    cmd = "SessionManager",
-    enabled = vim.g.resession_enabled ~= true,
-  },
   {
     "stevearc/resession.nvim",
-    enabled = vim.g.resession_enabled == true,
     lazy = true,
     opts = {
       buf_filter = function(bufnr) return require("astronvim.utils.buffer").is_restorable(bufnr) end,
