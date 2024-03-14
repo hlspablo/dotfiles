@@ -1,4 +1,33 @@
 return {
+	"nvim-treesitter/nvim-treesitter",
+	opts = {
+		ensure_installed = {
+			-- defaults
+			"vim",
+			"lua",
+			"vimdoc",
+			-- web dev
+			"html",
+			"css",
+			"javascript",
+			"typescript",
+			"tsx",
+		},
+	},
+	{
+		"kdheepak/lazygit.nvim",
+		cmd = {
+			"LazyGit",
+			"LazyGitConfig",
+			"LazyGitCurrentFile",
+			"LazyGitFilter",
+			"LazyGitFilterCurrentFile",
+		},
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
+
 	{
 		"zbirenbaum/copilot.lua",
 		event = "InsertEnter",
@@ -41,13 +70,6 @@ return {
 			require("configs.lspconfig")
 		end,
 	},
-	{
-		"stevearc/conform.nvim",
-		config = function()
-			require("configs.conform")
-		end,
-	},
-
 	{
 		"nvim-tree/nvim-tree.lua",
 		opts = {
