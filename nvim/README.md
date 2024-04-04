@@ -1,2 +1,3 @@
 # starter
-Starter config for NvChad
+
+Starter config for 'NvChad'
